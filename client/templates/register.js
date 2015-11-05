@@ -11,7 +11,8 @@ Template.register.events({
 				isNotEmpty(last_name) &&
 				isEmail(email) &&
 				isValidPassword(password, password2)){
-			Account.createUser({
+
+			Accounts.createUser({
 				profile: {
 					first_name: first_name,
 					last_name: last_name
@@ -23,9 +24,10 @@ Template.register.events({
 					FlashMessages.sendError('There was an error with registration');
 				}else{
 					FlashMessages.sendSuccess('Account Created! You are now logged in')
-					//Router.go('/dashboard');
+					Router.go('/dashboard');
 				}
 			});
+
 		}	
 		// Prevent Submiting
 		return false;

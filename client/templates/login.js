@@ -10,5 +10,6 @@ Template.login.events({
 				FlashMessages.sendError(err.reason);
 			}
 		});
+		return false;
 	}
 });
