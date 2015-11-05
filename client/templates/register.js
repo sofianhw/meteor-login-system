@@ -23,7 +23,7 @@ Template.register.events({
 					FlashMessages.sendError('There was an error with registration');
 				}else{
 					FlashMessages.sendSuccess('Account Created! You are now logged in')
-					Router.go('/dashboard');
+					//Router.go('/dashboard');
 				}
 			});
 		}	
