@@ -8,6 +8,9 @@ Template.login.events({
 				event.target.email.value = email;
 				event.target.password.value = password;
 				FlashMessages.sendError(err.reason);
+			}else{
+				FlashMessages.sendSuccess('You are now logged in');
+				Router.go('/dashboard');
 			}
 		});
 		return false;
